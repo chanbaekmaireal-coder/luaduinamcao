@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tri thức nghề dệt đũi Nam Cao — Di sản văn hóa phi vật thể quốc gia</title>
+
+  <!-- Google Fonts: Playfair Display (Tiêu đề hoài niệm) & Be Vietnam Pro (Nội dung thanh thoát) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            silk: {
+              cream: '#FAF6EE',
+              paper: '#F4E8D1',
+              gold: '#C49746',
+              lightgold: '#E5C378',
+              accent: '#8C2D19'
+            },
+            wood: {
+              light: '#8B654C',
+              DEFAULT: '#5C4033',
+              dark: '#42281D',
+              deep: '#2B1C14'
+            }
+          },
+          fontFamily: {
+            heritage: ['"Playfair Display"', '"Noto Serif"', 'Georgia', 'serif'],
+            body: ['"Be Vietnam Pro"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="bg-[#FAF6EE] text-[#31231E] font-body selection:bg-[#F4E8D1] selection:text-[#42281D]">
+
+  <!-- ==================== HEADER & THANH ĐIỀU HƯỚNG ==================== -->
+  <header class="sticky top-0 z-40 bg-[#FAF6EE]/95 backdrop-blur-md border-b border-[#E2D5C3] transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo và Tiêu đề ngắn -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center border-2 border-[#C49746] shadow-sm transition-transform duration-300 group-hover:rotate-12">
+          <!-- Biểu tượng con thoi dệt -->
+          <svg class="w-6 h-6 text-[#E5C378]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block font-heritage text-lg sm:text-xl font-bold text-[#42281D] tracking-wide leading-tight group-hover:text-[#8C2D19] transition-colors">
+            Đũi Nam Cao
+          </span>
+          <span class="block text-[11px] uppercase tracking-wider text-[#6B5549] font-medium">
+            Di sản văn hóa phi vật thể quốc gia
+          </span>
+        </div>
+      </a>
+
+      <!-- Menu máy tính -->
+      <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium text-[#42281D]">
+        <a href="#home" class="nav-link hover:text-[#8C2D19] transition-colors">Trang chủ</a>
+        <a href="#about" class="nav-link hover:text-[#8C2D19] transition-colors">Khái quát nghề</a>
+        <a href="#journey" class="nav-link hover:text-[#8C2D19] transition-colors">Hành trình sợi đũi</a>
+        <a href="#comparison" class="nav-link hover:text-[#8C2D19] transition-colors">So sánh lụa</a>
+        <a href="#artisans" class="nav-link hover:text-[#8C2D19] transition-colors">Nghệ nhân</a>
+        <a href="#values" class="nav-link hover:text-[#8C2D19] transition-colors">Giá trị tri thức</a>
+        <a href="#conservation" class="nav-link hover:text-[#8C2D19] transition-colors">Đề xuất phương án bảo tồn</a>
+        <a href="#guestbook" class="nav-link hover:text-[#8C2D19] transition-colors">Sổ lưu niệm</a>
+      </nav>
+
+      <!-- Nút hành động & Nút mở menu di động -->
+      <div class="flex items-center gap-3">
+        <a href="#journey" class="hidden md:inline-flex btn-heritage px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider">
+          Khám phá 10 công đoạn
+        </a>
+
+        <!-- Nút menu di động -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg text-[#5C4033] hover:bg-[#F4E8D1] transition-colors" aria-label="Mở thực đơn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Menu di động (Drawer Modal) -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#2B1C14]/70 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-4/5 max-w-sm bg-[#FAF6EE] h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-[#E2D5C3]">
+          <span class="font-heritage text-lg font-bold text-[#42281D]">Mục lục nội dung</span>
+          <button id="closeMobileMenuBtn" class="p-1 rounded-full text-[#6B5549] hover:bg-[#F4E8D1]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4 mt-6 text-base font-medium text-[#42281D]">
+          <a href="#home" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Trang chủ</a>
+          <a href="#about" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Khái quát về nghề</a>
+          <a href="#village-location" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Vị trí làng nghề</a>
+          <a href="#journey" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Hành trình sợi đũi (10 công đoạn)</a>
+          <a href="#comparison" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">So sánh lụa thủ công & công nghiệp</a>
+          <a href="#artisans" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Người nắm giữ tri thức</a>
+          <a href="#values" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Giá trị của tri thức nghề</a>
+          <a href="#challenges" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Thực trạng & Thách thức</a>
+          <a href="#conservation" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Đề xuất phương án bảo tồn và phát huy tri thức nghề</a>
+          <a href="#conclusion" class="mobile-nav-link hover:text-[#8C2D19] py-1 border-b border-[#E2D5C3]/40">Kết luận</a>
+          <a href="#guestbook" class="mobile-nav-link hover:text-[#8C2D19] py-1">Sổ lưu niệm</a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-[#E2D5C3] text-xs text-[#6B5549] text-center">
+        Làng dệt đũi Nam Cao • Kiến Xương • Thái Bình
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== 1. TRANG CHỦ ==================== -->
+  <section id="home" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-[#FAF6EE]">
+    
+    <!-- Canvas hoạt họa sợi đũi & dải lụa chuyển động mềm mại trên nền -->
+    <canvas id="silkCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Cột trái: Nội dung tri thức từ tài liệu -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Huy hiệu di sản -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C49746]/60 bg-[#FFFDF9]/85 backdrop-blur-sm text-xs text-[#8C2D19] font-semibold tracking-wider shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#8C2D19] animate-ping"></span>
+            <span>DI SẢN VĂN HÓA PHI VẬT THỂ QUỐC GIA</span>
+          </div>
+
+          <!-- Tiêu đề lớn hoài niệm -->
+          <h1 class="font-heritage text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#31231E] leading-tight">
+            Tri thức nghề dệt đũi <span class="text-[#8C2D19]">Nam Cao</span>
+          </h1>
+
+          <!-- Phụ đề chuẩn xác theo tài liệu -->
+          <p class="font-heritage text-lg sm:text-xl md:text-2xl text-[#8C2D19] italic">
+            Từ kinh nghiệm lao động đến di sản văn hóa sống
+          </p>
+
+          <!-- Đoạn giới thiệu ngắn 1 -->
+          <p class="text-sm sm:text-base md:text-lg text-[#5C4033] leading-relaxed">
+            Nghề dệt đũi Nam Cao không chỉ tạo ra những tấm vải mang đặc trưng riêng mà còn lưu giữ hệ thống tri thức được tích lũy qua nhiều thế hệ. Đó là hiểu biết về nguyên liệu, kỹ thuật xử lý sợi, cách vận hành khung cửi, khả năng cảm nhận chất lượng và kinh nghiệm sáng tạo sản phẩm.
+          </p>
+
+          <!-- Đoạn giới thiệu ngắn 2 -->
+          <p class="text-sm sm:text-base text-[#6B5549] leading-relaxed">
+            Thông qua việc tìm hiểu quy trình sản xuất và những người trực tiếp thực hành nghề, website giới thiệu tri thức nghề như một di sản sống — được lưu giữ, truyền nối và biến đổi trong đời sống cộng đồng.
+          </p>
+
+          <!-- Các nút hành động -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#about" class="btn-heritage px-7 py-3.5 rounded-full font-medium text-sm md:text-base inline-flex items-center gap-2 shadow-md">
+              <span>Khám phá tri thức nghề</span>
+              <svg class="w-4 h-4 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </a>
+            <a href="#journey" class="px-6 py-3.5 rounded-full border border-[#C49746] bg-[#FFFDF9]/90 hover:bg-[#F4E8D1] text-[#5C4033] font-medium text-sm md:text-base inline-flex items-center gap-2 shadow-sm transition-all">
+              <span>Hành trình sợi đũi</span>
+              <svg class="w-4 h-4 text-[#C49746]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- 3 Thẻ chỉ số di sản hàng ngang -->
+          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-[#E2D5C3]/80">
+            <div>
+              <span class="font-heritage text-2xl sm:text-3xl font-bold text-[#8C2D19] block">400+ Năm</span>
+              <span class="text-xs text-[#6B5549] block mt-0.5">Bề dày lịch sử làng nghề</span>
+            </div>
+            <div>
+              <span class="font-heritage text-2xl sm:text-3xl font-bold text-[#5C4033] block">10</span>
+              <span class="text-xs text-[#6B5549] block mt-0.5">Công đoạn thủ công tinh hoa</span>
+            </div>
+            <div>
+              <span class="font-heritage text-2xl sm:text-3xl font-bold text-[#C49746] block">100%</span>
+              <span class="text-xs text-[#6B5549] block mt-0.5">Tơ tằm tự nhiên mộc mạc</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cột phải: Ảnh nghệ nhân theo đúng hướng dẫn thiết kế trong tài liệu -->
+        <div class="lg:col-span-5 relative">
+          <div class="parchment-card p-3 sm:p-4 rounded-3xl bg-[#FFFDF9]/90 border border-[#E2D5C3] shadow-xl relative">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square relative">
+              <img src="./images/Locket_1792663924837_32.jpg" alt="Nghệ nhân Nam Cao bền bỉ bên từng sợi đũi mộc" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#2B1C14]/70 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-[#FAF6EE]">
+                <p class="font-heritage text-sm sm:text-base font-semibold">Nghệ nhân Nam Cao bền bỉ bên từng sợi đũi mộc</p>
+                <span class="text-xs text-[#E5C378]">Hình ảnh thực địa tại Hợp tác xã Dệt đũi Nam Cao</span>
+              </div>
+            </div>
+            <!-- Con dấu mộc văn hóa trang trí góc -->
+            <div class="absolute -bottom-3 -right-3 w-20 h-20 rounded-full border-2 border-[#8C2D19] bg-[#FFFDF9] flex items-center justify-center text-center p-1 shadow-md rotate-12 pointer-events-none">
+              <span class="text-[9px] font-bold text-[#8C2D19] uppercase leading-tight font-heritage">Di sản<br/>sống</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 2. KHÁI QUÁT VỀ NGHỀ DỆT ĐŨI NAM CAO ==================== -->
+  <section id="about" class="py-20 bg-[#F4E8D1]/40 border-y border-[#E2D5C3] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Tiêu đề mục -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-2">Tổng quan di sản</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl font-bold text-[#31231E] mb-4">
+          Khái quát về nghề dệt đũi Nam Cao
+        </h2>
+        <div class="w-20 h-0.5 bg-[#C49746] mx-auto mb-4"></div>
+        <p class="text-[#6B5549] text-sm sm:text-base">
+          Nghề dệt đũi Nam Cao gắn liền với dòng chảy thời gian của làng quê hạ lưu sông Hồng, nơi mỗi tấm vải là sự đúc kết của tri thức lao động bền bỉ.
+        </p>
+      </div>
+
+      <!-- 2 Thẻ giới thiệu trọng tâm -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Nghề dệt đũi là gì -->
+        <div class="parchment-card p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center mb-5 shadow-sm">
+              <svg class="w-6 h-6 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <h3 class="font-heritage text-2xl font-bold text-[#31231E] mb-3">Nghề dệt đũi là gì?</h3>
+            <p class="text-[#42281D] leading-relaxed text-sm md:text-base mb-4">
+              Nghề dệt đũi Nam Cao gắn với việc xử lý sợi tơ tằm, đặc biệt là kỹ thuật kéo hoặc rút sợi đũi thủ công. Sản phẩm mang kết cấu và bề mặt riêng, có thể phát triển thành vải, khăn, quần áo và các mặt hàng tiêu dùng.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#E2D5C3]/60">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#8C2D19]"></span>
+              <span class="text-xs text-[#8C2D19] font-semibold">Nghề được ghi danh là di sản văn hóa phi vật thể quốc gia năm 2023.</span>
+            </div>
+            <!-- Ảnh bằng chứng nhận di sản thực tế -->
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_091059.jpg" alt="Chứng nhận Di sản văn hóa phi vật thể quốc gia nghề dệt đũi Nam Cao" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Khái niệm trọng tâm: Tri thức nghề -->
+        <div class="parchment-card p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#C49746] text-[#FAF6EE] flex items-center justify-center mb-5 shadow-sm">
+              <svg class="w-6 h-6 text-[#FAF6EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <h3 class="font-heritage text-2xl font-bold text-[#31231E] mb-3">Khái niệm trọng tâm: Tri thức nghề</h3>
+            <p class="text-[#42281D] leading-relaxed text-sm md:text-base mb-4">
+              Tri thức nghề là hệ thống hiểu biết, kinh nghiệm, kỹ năng và khả năng phán đoán được tích lũy trong quá trình lao động, giúp người thợ lựa chọn nguyên liệu, thực hiện kỹ thuật, xử lý sai sót và tạo ra sản phẩm đạt yêu cầu.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#E2D5C3]/60">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#5C4033]"></span>
+              <span class="text-xs text-[#5C4033] font-semibold">Hệ thống tri thức được phân chia thành 5 nhóm cốt lõi thực hành.</span>
+            </div>
+            <!-- Ảnh biển di sản tại làng nghề -->
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_090231.jpg" alt="Biển hiệu Di sản văn hóa phi vật thể quốc gia Đũi Nam Cao" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Nhóm tri thức nghề (Trình bày 5 thẻ trang nhã theo tài liệu) -->
+      <div class="mb-20">
+        <div class="text-center mb-10">
+          <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-1">Cấu trúc tri thức</span>
+          <h3 class="font-heritage text-2xl sm:text-3xl font-bold text-[#31231E]">
+            Năm nhóm tri thức nghề dệt đũi Nam Cao
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          
+          <!-- Thẻ 1 -->
+          <div class="parchment-card p-6 rounded-xl text-center group hover:-translate-y-1 transition-transform">
+            <div class="w-12 h-12 mx-auto rounded-full bg-[#F4E8D1] text-[#5C4033] flex items-center justify-center mb-4 group-hover:bg-[#5C4033] group-hover:text-[#FFFDF9] transition-colors">
+              <span class="font-heritage font-bold text-lg">01</span>
+            </div>
+            <h4 class="font-heritage font-bold text-[#31231E] text-base mb-2">Nguyên liệu & Môi trường</h4>
+            <p class="text-xs text-[#6B5549] leading-relaxed">
+              Hiểu về cây dâu, con tằm, kén và sợi tơ.
+            </p>
+          </div>
+
+          <!-- Thẻ 2 -->
+          <div class="parchment-card p-6 rounded-xl text-center group hover:-translate-y-1 transition-transform">
+            <div class="w-12 h-12 mx-auto rounded-full bg-[#F4E8D1] text-[#5C4033] flex items-center justify-center mb-4 group-hover:bg-[#5C4033] group-hover:text-[#FFFDF9] transition-colors">
+              <span class="font-heritage font-bold text-lg">02</span>
+            </div>
+            <h4 class="font-heritage font-bold text-[#31231E] text-base mb-2">Kỹ thuật thực hành</h4>
+            <p class="text-xs text-[#6B5549] leading-relaxed">
+              Biết kéo sợi, đánh ống, xe sợi, mắc cửi và dệt.
+            </p>
+          </div>
+
+          <!-- Thẻ 3 -->
+          <div class="parchment-card p-6 rounded-xl text-center group hover:-translate-y-1 transition-transform">
+            <div class="w-12 h-12 mx-auto rounded-full bg-[#F4E8D1] text-[#5C4033] flex items-center justify-center mb-4 group-hover:bg-[#5C4033] group-hover:text-[#FFFDF9] transition-colors">
+              <span class="font-heritage font-bold text-lg">03</span>
+            </div>
+            <h4 class="font-heritage font-bold text-[#31231E] text-base mb-2">Cảm quan xúc giác</h4>
+            <p class="text-xs text-[#6B5549] leading-relaxed">
+              Nhận biết độ mềm, độ dai, độ căng và độ đều của sợi.
+            </p>
+          </div>
+
+          <!-- Thẻ 4 -->
+          <div class="parchment-card p-6 rounded-xl text-center group hover:-translate-y-1 transition-transform">
+            <div class="w-12 h-12 mx-auto rounded-full bg-[#F4E8D1] text-[#5C4033] flex items-center justify-center mb-4 group-hover:bg-[#5C4033] group-hover:text-[#FFFDF9] transition-colors">
+              <span class="font-heritage font-bold text-lg">04</span>
+            </div>
+            <h4 class="font-heritage font-bold text-[#31231E] text-base mb-2">Thẩm mỹ tạo hình</h4>
+            <p class="text-xs text-[#6B5549] leading-relaxed">
+              Lựa chọn màu sắc, kết cấu và hình thức sản phẩm.
+            </p>
+          </div>
+
+          <!-- Thẻ 5 -->
+          <div class="parchment-card p-6 rounded-xl text-center group hover:-translate-y-1 transition-transform">
+            <div class="w-12 h-12 mx-auto rounded-full bg-[#F4E8D1] text-[#5C4033] flex items-center justify-center mb-4 group-hover:bg-[#5C4033] group-hover:text-[#FFFDF9] transition-colors">
+              <span class="font-heritage font-bold text-lg">05</span>
+            </div>
+            <h4 class="font-heritage font-bold text-[#31231E] text-base mb-2">Tổ chức & Kinh tế</h4>
+            <p class="text-xs text-[#6B5549] leading-relaxed">
+              Phối hợp công đoạn, kiểm tra chất lượng và đáp ứng nhu cầu thị trường.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- VỊ TRÍ CỦA LÀNG NGHỀ (Dạng ghi chú nhỏ, trang nhã sau phần khái quát nghề đũi) -->
+      <div id="village-location" class="parchment-card p-5 md:p-6 rounded-xl border border-[#C49746]/50 bg-[#F4E8D1]/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-full bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+            <svg class="w-5 h-5 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs uppercase tracking-wider text-[#8C2D19] font-bold">Ghi chú vị trí làng nghề</span>
+              <span class="text-[#C49746] text-xs">✤</span>
+              <span class="text-xs text-[#6B5549]">Tọa độ: 20°25'05" Bắc, 106°27'14" Đông</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#42281D] leading-relaxed">
+              Hợp tác xã dệt đũi Nam Cao — Thôn Nam Đường Đông, xã Nam Cao, huyện Kiến Xương, tỉnh Thái Bình.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2.5 shrink-0 self-end md:self-center">
+          <a href="https://www.google.com/maps/search/?api=1&query=L%C3%A0ng+ngh%E1%BB%87+d%E1%BB%87t+%C4%91%C5%A9i+Nam+Cao+Ki%E1%BA%BFn+X%C6%B0%C6%A1ng+Th%C3%A1i+B%C3%ACnh" target="_blank" rel="noopener noreferrer" class="btn-heritage px-3.5 py-2 rounded-lg text-xs font-medium inline-flex items-center gap-1.5 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <span>Mở Google Maps</span>
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=H%E1%BB%A3p+t%C3%A1c+x%C3%A3+d%E1%BB%87t+%C4%91%C5%A9i+Nam+Cao+Ki%E1%BA%BFn+X%C6%B0%C6%A1ng+Th%C3%A1i+B%C3%ACnh" target="_blank" rel="noopener noreferrer" class="btn-gold px-3.5 py-2 rounded-lg text-xs font-medium inline-flex items-center gap-1.5 shadow-sm">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <span>Chỉ đường</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. HÀNH TRÌNH SỢI ĐŨI — 10 CÔNG ĐOẠN ==================== -->
+  <section id="journey" class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Tiêu đề mục -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-2">Trọng tâm di sản</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl md:text-5xl font-bold text-[#31231E] mb-4">
+          Hành trình sợi đũi Nam Cao
+        </h2>
+        <p class="font-heritage text-lg text-[#8C2D19] italic mb-4">
+          Mười công đoạn kết tinh mười nhóm tri thức nghệ nhân
+        </p>
+        <div class="w-24 h-0.5 bg-[#C49746] mx-auto mb-4"></div>
+        <p class="text-[#6B5549] text-sm sm:text-base">
+          Trên sợi đũi mộc mạc trải qua mười công đoạn công phu. Hãy bấm vào từng số để mở ra tri thức chi tiết, cảm nhận đôi bàn tay khéo léo của người thợ dệt.
+        </p>
+      </div>
+
+      <!-- SƠ ĐỒ HÀNH TRÌNH SỢI ĐŨI (Dây sợi uốn lượn mang 10 mốc công đoạn) -->
+      <div class="parchment-card p-8 md:p-12 rounded-3xl border-2 border-[#C49746]/30 bg-[#FFFDF9] relative overflow-hidden">
+        
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-[#E2D5C3]">
+          <div>
+            <h3 class="font-heritage text-xl sm:text-2xl font-bold text-[#31231E]">
+              Dòng chảy sợi đũi qua đôi bàn tay người thợ
+            </h3>
+            <span class="text-xs text-[#6B5549]">Bấm vào từng số để xem ảnh tư liệu và tri thức độc bản</span>
+          </div>
+          <span class="seal-badge text-[11px] rounded hidden sm:inline-block">10 CÔNG ĐOẠN LIÊN HOÀN</span>
+        </div>
+
+        <!-- Các điểm mốc 1-10 trên hành trình -->
+        <div id="journeyNodesContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-10 gap-x-4 relative z-10">
+          <!-- Render các điểm mốc từ app.js -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== MODAL CHI TIẾT CÔNG ĐOẠN ==================== -->
+  <!-- Có icon Back, Next, Close; nút Close cuộn về đúng trang hành trình sợi đũi -->
+  <div id="stageModal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="parchment-card w-full max-w-4xl rounded-2xl shadow-2xl border-2 border-[#C49746] bg-[#FFFDF9] overflow-hidden my-8 animate-fadeIn">
+      
+      <!-- Thanh điều hướng đầu modal -->
+      <div class="bg-[#5C4033] text-[#FAF6EE] px-6 py-4 flex items-center justify-between border-b border-[#C49746]">
+        <div>
+          <span id="modalStageNumber" class="text-xs uppercase tracking-widest text-[#E5C378] font-semibold block">
+            CÔNG ĐOẠN 01 / 10
+          </span>
+          <h3 id="modalStageTitle" class="font-heritage text-xl sm:text-2xl font-bold text-[#FFFDF9] mt-0.5">
+            Trồng dâu
+          </h3>
+        </div>
+        
+        <!-- Nút Đóng (Close icon) -->
+        <button onclick="closeStageModal()" class="w-10 h-10 rounded-full bg-[#42281D] hover:bg-[#8C2D19] text-[#FAF6EE] flex items-center justify-center transition-colors shadow-sm" aria-label="Đóng chi tiết">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Thân modal -->
+      <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
+        
+        <!-- Phụ đề tri thức tương ứng -->
+        <div class="border-b border-[#E2D5C3] pb-3">
+          <span class="text-xs uppercase tracking-wider text-[#8C2D19] font-bold block mb-1">Tri thức cốt lõi</span>
+          <p id="modalStageSubtitle" class="font-heritage text-lg sm:text-xl text-[#31231E] italic">
+            Tri thức quan sát tự nhiên và kinh nghiệm chọn lọc nguyên liệu
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+          
+          <!-- Ảnh công đoạn chất lượng cao -->
+          <div class="md:col-span-6 rounded-xl overflow-hidden border border-[#E2D5C3] bg-[#F4E8D1] shadow-md aspect-[4/3]">
+            <img id="modalStageImage" src="" alt="Minh họa công đoạn" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Nội dung phân tích -->
+          <div class="md:col-span-6 space-y-4">
+            <h4 class="font-heritage text-lg font-bold text-[#31231E]">Chi tiết thực hành công đoạn</h4>
+            <p id="modalStageContent" class="text-sm sm:text-base text-[#42281D] leading-relaxed">
+              <!-- Nội dung từ app.js -->
+            </p>
+
+            <!-- Khung nổi bật tri thức -->
+            <div class="bg-[#F4E8D1]/60 p-4 rounded-xl border-l-4 border-[#C49746]">
+              <span class="text-xs uppercase font-bold text-[#5C4033] block mb-1">Điểm sáng tri thức nghệ nhân</span>
+              <p id="modalStageHighlight" class="text-xs sm:text-sm text-[#42281D] italic">
+                <!-- Highlight từ app.js -->
+              </p>
+            </div>
+
+            <div class="pt-2 text-xs text-[#6B5549] flex items-start gap-2">
+              <span class="text-[#8C2D19]">✤</span>
+              <p id="modalStageNote">
+                <!-- Note từ app.js -->
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Chân modal chứa nút Back, Next thuần bằng icon (chỉ dùng duy nhất 1 nút Đóng ở đầu modal) -->
+      <div class="bg-[#F4E8D1]/50 px-6 py-4 border-t border-[#E2D5C3] flex items-center justify-between">
+        
+        <!-- Nút Back (Quay lại) -->
+        <button onclick="prevStage()" class="w-11 h-11 rounded-full border border-[#5C4033] bg-[#FFFDF9] text-[#5C4033] hover:bg-[#5C4033] hover:text-[#FFFDF9] flex items-center justify-center transition-all shadow-sm" title="Công đoạn trước" aria-label="Công đoạn trước">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <!-- Nhãn chỉ số công đoạn tinh tế ở chân modal -->
+        <span class="text-xs font-heritage font-semibold text-[#6B5549] tracking-wider uppercase">
+          Chuyển công đoạn
+        </span>
+
+        <!-- Nút Next (Tiếp theo) -->
+        <button onclick="nextStage()" class="w-11 h-11 rounded-full border border-[#C49746] bg-[#C49746] text-[#FFFDF9] hover:bg-[#A97A2E] flex items-center justify-center transition-all shadow-sm" title="Công đoạn tiếp theo" aria-label="Công đoạn tiếp theo">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== 4. GỢI Ý SO SÁNH CHẤT VẢI ==================== -->
+  <!-- Dạng gợi ý nhỏ gọn, trực quan theo đúng thiết kế chất vải -->
+  <section id="comparison" class="py-14 md:py-18 bg-[#F4E8D1]/25 border-y border-[#E2D5C3] relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Tiêu đề gợi ý nhỏ cho người xem -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4E8D1] text-[#8C2D19] text-xs font-semibold uppercase tracking-wider mb-2">
+          <span>Gợi ý nhận biết chất vải</span>
+        </div>
+        <h2 class="font-heritage text-2xl sm:text-3xl font-bold text-[#31231E] mb-2">
+          So sánh lụa đũi thủ công và lụa công nghiệp
+        </h2>
+        <p class="text-xs sm:text-sm text-[#6B5549]">
+          Kéo thanh trượt ở giữa để quan sát trực quan sự khác biệt giữa hai bề mặt chất liệu
+        </p>
+      </div>
+
+      <!-- Khung slider so sánh chất vải chuẩn như Ảnh 1 -->
+      <div class="parchment-card p-3 sm:p-5 rounded-3xl border-2 border-[#C49746]/40 bg-[#FFFDF9] shadow-lg">
+        
+        <div id="comparisonSliderContainer" class="comparison-container rounded-2xl min-h-[320px] sm:min-h-[280px] md:aspect-[21/9] border border-[#E2D5C3] relative select-none">
+          
+          <!-- Lớp dưới: Lụa công nghiệp (Bên phải - mặt vải trơn kẻ ô máy) -->
+          <div class="absolute inset-0 w-full h-full cloth-industrial flex flex-col justify-between p-6 sm:p-8 text-right sm:text-left select-none">
+            <div class="flex flex-col items-end">
+              <span class="inline-block px-3.5 py-1 rounded-full bg-[#FCE7F3] text-[#9D174D] border border-[#F472B6] font-bold text-xs sm:text-sm tracking-wide shadow-sm mb-3">
+                LỤA CÔNG NGHIỆP / SỢI TỔNG HỢP PHA
+              </span>
+              <p class="text-xs sm:text-sm text-[#475569] leading-relaxed max-w-xs sm:max-w-sm">
+                Bề mặt trơn láng nhân tạo, sợi nilong bí bách, không thấm mồ hôi, dễ tích điện vào mùa đông và gây ngứa da nhạy cảm.
+              </p>
+            </div>
+            <div class="text-[11px] sm:text-xs font-bold text-[#64748B] uppercase tracking-wider mt-4">
+              KẾT CẤU: Nhựa tổng hợp dệt máy
+            </div>
+          </div>
+
+          <!-- Lớp trên: Lụa đũi thủ công Nam Cao (Bên trái - mặt vải đũi ấm áp có nốt sần tự nhiên) -->
+          <div id="comparisonTopLayer" class="absolute inset-0 w-full h-full cloth-handmade flex flex-col justify-between p-6 sm:p-8 select-none" style="clip-path: inset(0 50% 0 0);">
+            <div class="flex flex-col items-start">
+              <span class="inline-block px-3.5 py-1 rounded-full bg-[#FEF3C7] text-[#92400E] border border-[#F59E0B] font-bold text-xs sm:text-sm tracking-wide shadow-sm mb-3">
+                ĐŨI THỦ CÔNG NAM CAO (TƠ TẰM DÂU 100%)
+              </span>
+              <p class="text-xs sm:text-sm text-[#42281D] leading-relaxed max-w-xs sm:max-w-sm text-left">
+                Nốt sần tự nhiên đặc trưng, sợi tơ xốp rỗng có khoang khí vi mô giúp điều hòa nhiệt "đông ấm, hạ mát", phân hủy sinh học 100%.
+              </p>
+            </div>
+            <div class="text-[11px] sm:text-xs font-bold text-[#5C4033] uppercase tracking-wider mt-4">
+              KẾT CẤU: Sợi tơ tằm thô chuốt tay truyền thống
+            </div>
+          </div>
+
+          <!-- Thanh trượt chia đôi với nút tròn cam và mũi tên 2 chiều -->
+          <div id="comparisonSlider" class="comparison-slider" style="left: 50%;">
+            <div id="comparisonHandle" class="comparison-handle text-[#FFFDF9]">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. NGƯỜI NẮM GIỮ VÀ TRUYỀN NỐI TRI THỨC NGHỀ ==================== -->
+  <section id="artisans" class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Ảnh nghệ nhân kéo sợi thực tế -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-[#FFFDF9] bg-[#F4E8D1] aspect-[4/3]">
+              <img src="./images/20261009_132842.jpg" alt="Các bà, các cụ nghệ nhân làng dệt đũi Nam Cao" class="w-full h-full object-cover" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[4/3]">
+                <img src="./images/IMG_20261009_105923.jpg" alt="Bàn tay nghệ nhân kéo sợi tơ trong nước" class="w-full h-full object-cover" />
+              </div>
+              <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[4/3]">
+                <img src="./images/20261009_090226.jpg" alt="Biển hiệu HTX Dệt Đũi Nam Cao" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nội dung người nắm giữ tri thức -->
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          
+          <div class="inline-flex items-center gap-2 seal-badge text-xs rounded-sm">
+            <span>KHO TÀNG SỐNG CỦA CỘNG ĐỒNG</span>
+          </div>
+
+          <h2 class="font-heritage text-3xl sm:text-4xl md:text-5xl font-bold text-[#31231E]">
+            Người nắm giữ và truyền nối tri thức nghề
+          </h2>
+
+          <p class="font-heritage text-lg text-[#8C2D19] italic">
+            Ai đang nắm giữ tri thức nghề dệt đũi Nam Cao?
+          </p>
+
+          <div class="space-y-4 text-sm sm:text-base text-[#42281D] leading-relaxed">
+            
+            <div class="flex items-start gap-3">
+              <span class="text-[#C49746] text-lg font-bold">✤</span>
+              <div>
+                <span class="font-semibold text-[#31231E]">Nghệ nhân là kho tàng sống lưu giữ tri thức:</span>
+                <p class="text-[#6B5549] mt-0.5">
+                  Tri thức nghề dệt đũi Nam Cao không tồn tại trên sách vở mà nằm ngay trong tư duy, đôi bàn tay và trải nghiệm sống của các nghệ nhân, thợ lành nghề (chủ yếu là các bà, các bác phụ nữ lớn tuổi từ bảy mươi đến trên tám mươi tuổi).
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#C49746] text-lg font-bold">✤</span>
+              <div>
+                <span class="font-semibold text-[#31231E]">Thách thức về nguy cơ thất truyền tri thức:</span>
+                <p class="text-[#6B5549] mt-0.5">
+                  Do tri thức nghề mang bản chất là tri thức cơ thể và cảm nhận thực hành, nếu không có thế hệ kế cận trực tiếp quan sát và rèn luyện, kho tàng tri thức này sẽ đứng trước nguy cơ biến mất. Hiện nay, người trẻ nhất làm nghề cũng đã ở độ tuổi khoảng bốn mươi do thanh niên chủ yếu làm việc tại các khu công nghiệp.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#C49746] text-lg font-bold">✤</span>
+              <div>
+                <span class="font-semibold text-[#31231E]">Cơ chế truyền dạy từ thực tiễn:</span>
+                <p class="text-[#6B5549] mt-0.5">
+                  Tri thức được trao truyền chủ yếu theo phương thức cầm tay chỉ việc, truyền khẩu và thực hành trực tiếp. Người học nghề tiếp thu tri thức không phải qua lý thuyết mà qua quá trình quan sát, bắt chước và tích lũy cảm giác qua từng thao tác.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#C49746] text-lg font-bold">✤</span>
+              <div>
+                <span class="font-semibold text-[#31231E]">Vai trò kết nối của Hợp tác xã:</span>
+                <p class="text-[#6B5549] mt-0.5">
+                  Sự đồng hành của cô Hạnh và Hợp tác xã dệt đũi Nam Cao giúp tập hợp các nghệ nhân, tạo môi trường để tri thức của họ tiếp tục được thực hành, ứng dụng và truyền dạy cho cộng đồng.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 6. GIÁ TRỊ CỦA TRI THỨC NGHỀ (4 THẺ NỘI DUNG) ==================== -->
+  <section id="values" class="py-20 md:py-28 bg-[#F4E8D1]/40 border-y border-[#E2D5C3] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Tiêu đề mục -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-2">Ý nghĩa trường tồn</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl md:text-5xl font-bold text-[#31231E] mb-4">
+          Giá trị của tri thức nghề
+        </h2>
+        <div class="w-20 h-0.5 bg-[#C49746] mx-auto mb-4"></div>
+        <p class="text-[#6B5549] text-sm sm:text-base">
+          Tri thức nghề dệt đũi Nam Cao tỏa sáng qua bốn trụ cột giá trị sâu sắc, kết nối cội nguồn quá khứ với hơi thở đương đại.
+        </p>
+      </div>
+
+      <!-- 4 Thẻ nội dung chuẩn theo tài liệu -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Thẻ 1: Giá trị văn hóa -->
+        <div class="parchment-card p-8 rounded-2xl relative border-t-4 border-[#8C2D19] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-lg bg-[#8C2D19]/10 text-[#8C2D19] flex items-center justify-center font-heritage font-bold">01</span>
+              <h3 class="font-heritage text-2xl font-bold text-[#31231E]">Giá trị văn hóa</h3>
+            </div>
+            <div class="space-y-3 text-sm text-[#42281D] leading-relaxed">
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Lưu giữ ký ức và di sản:</span>
+                <p class="text-[#6B5549]">
+                  Phản ánh lịch sử hơn bốn trăm năm hình thành và phát triển của làng nghề dệt đũi Nam Cao vùng hạ lưu sông Hồng, giữ gìn bản sắc văn hóa truyền thống của người Việt.
+                </p>
+              </div>
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Tích lũy kinh nghiệm qua nhiều thế hệ:</span>
+                <p class="text-[#6B5549]">
+                  Tri thức nghề là kho tàng kinh nghiệm sống động được các thế hệ nghệ nhân (chủ yếu là các bà, các bác lớn tuổi) lưu giữ, trao truyền và bồi đắp liên tục qua thời gian.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E2D5C3]/60">
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_091051.jpg" alt="Kệ lưu giữ các bằng khen và chứng nhận làng nghề Nam Cao" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Thẻ 2: Giá trị khoa học và thực tiễn -->
+        <div class="parchment-card p-8 rounded-2xl relative border-t-4 border-[#5C4033] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-lg bg-[#5C4033]/10 text-[#5C4033] flex items-center justify-center font-heritage font-bold">02</span>
+              <h3 class="font-heritage text-2xl font-bold text-[#31231E]">Giá trị khoa học và thực tiễn</h3>
+            </div>
+            <div class="space-y-3 text-sm text-[#42281D] leading-relaxed">
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Hiểu biết sâu sắc về nguyên liệu và môi trường:</span>
+                <p class="text-[#6B5549]">
+                  Thể hiện tri thức dân gian trong việc chọn đất trồng dâu, kỹ thuật nuôi tằm theo thời tiết để thu hoạch kén đạt chuẩn, cũng như bí quyết nhuộm màu tự nhiên từ củ nâu, quả mặc nưa.
+                </p>
+              </div>
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Kỹ thuật xử lý và công cụ thủ công:</span>
+                <p class="text-[#6B5549]">
+                  Thể hiện phản xạ tri thức cơ thể tinh xảo trong thao tác kéo dũi bằng tay, điều khiển khung cửi, mắc cửi và xử lý sự cố đứt sợi hay xô vải trong quá trình dệt.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E2D5C3]/60">
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_150527.jpg" alt="Khung dệt đũi cổ truyền với dàn sợi dọc tơ tằm vàng óng" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Thẻ 3: Giá trị kinh tế và sáng tạo -->
+        <div class="parchment-card p-8 rounded-2xl relative border-t-4 border-[#C49746] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-lg bg-[#C49746]/10 text-[#C49746] flex items-center justify-center font-heritage font-bold">03</span>
+              <h3 class="font-heritage text-2xl font-bold text-[#31231E]">Giá trị kinh tế và sáng tạo</h3>
+            </div>
+            <div class="space-y-3 text-sm text-[#42281D] leading-relaxed">
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Tạo sản phẩm độc bản và sinh kế địa phương:</span>
+                <p class="text-[#6B5549]">
+                  Tạo ra dòng vải đũi tơ tằm mộc mạc, có đặc tính riêng biệt, giúp tạo việc làm và nguồn thu nhập ổn định tại chỗ cho lao động lớn tuổi tại làng quê.
+                </p>
+              </div>
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Thích ứng với thị trường hiện đại:</span>
+                <p class="text-[#6B5549]">
+                  Dưới sự kết nối của Hợp tác xã và cô Hạnh, tri thức nghề được mở rộng ứng dụng sang các sản phẩm thời trang sinh thái, tiêu dùng xanh, đáp ứng đúng xu hướng thị trường trong nước và quốc tế.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E2D5C3]/60">
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_150118.jpg" alt="Không gian trưng bày áo dài và sản phẩm lụa đũi Nam Cao" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Thẻ 4: Giá trị giáo dục -->
+        <div class="parchment-card p-8 rounded-2xl relative border-t-4 border-[#8B654C] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-lg bg-[#8B654C]/10 text-[#8B654C] flex items-center justify-center font-heritage font-bold">04</span>
+              <h3 class="font-heritage text-2xl font-bold text-[#31231E]">Giá trị giáo dục</h3>
+            </div>
+            <div class="space-y-3 text-sm text-[#42281D] leading-relaxed">
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Thấu hiểu giá trị lao động thủ công:</span>
+                <p class="text-[#6B5549]">
+                  Giúp cộng đồng và du khách trân trọng sự nhẫn nại, tỉ mỉ và tâm huyết của người nghệ nhân sau từng thước vải đũi thủ công.
+                </p>
+              </div>
+              <div>
+                <span class="font-semibold text-[#5C4033] block mb-1">Tiếp cận tri thức qua thực hành:</span>
+                <p class="text-[#6B5549]">
+                  Làm nền tảng cho các hoạt động du lịch trải nghiệm, chuyến điền dã của học sinh, sinh viên, giúp thế hệ trẻ tiếp cận di sản bằng thực tế quan sát và cầm tay chỉ việc, từ đó khơi dậy niềm tự hào và ý thức nối nghiệp.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E2D5C3]/60">
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/9] bg-[#F4E8D1]">
+              <img src="./images/20261009_110656.jpg" alt="Học sinh, sinh viên trong chuyến điền dã tìm hiểu kén tơ đũi" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 7. THỰC TRẠNG BIẾN ĐỔI VÀ THÁCH THỨC ==================== -->
+  <section id="challenges" class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-2">Thực tiễn đời sống</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl font-bold text-[#31231E] mb-4">
+          Thực trạng biến đổi và thách thức
+        </h2>
+        <div class="w-20 h-0.5 bg-[#C49746] mx-auto mb-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Mục 1: Thực trạng biến đổi -->
+        <div class="parchment-card p-8 rounded-2xl space-y-4">
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-[#8C2D19] uppercase">
+            <span>Phần 1</span>
+          </div>
+          <h3 class="font-heritage text-2xl font-bold text-[#31231E]">
+            Thực trạng biến đổi của tri thức nghề
+          </h3>
+          <div class="space-y-4 text-sm text-[#42281D] leading-relaxed pt-2">
+            <div>
+              <span class="font-semibold text-[#5C4033] block mb-1">Nguy cơ mai một và đứt gãy thế hệ trong quá khứ:</span>
+              <p class="text-[#6B5549]">
+                Làng nghề có lịch sử bốn trăm năm nhưng từng đứng trước bờ vực suýt bị thất truyền (có giai đoạn chỉ còn ba đến bốn hộ gia đình duy trì làm nghề).
+              </p>
+            </div>
+            <div>
+              <span class="font-semibold text-[#5C4033] block mb-1">Sự suy giảm do tác động thị trường cũ:</span>
+              <p class="text-[#6B5549]">
+                Làng nghề từng chịu ảnh hưởng nặng nề bởi sự cạnh tranh từ thị trường bên ngoài và việc thương lái ép giá, không bền vững, dẫn đến thu hẹp quy mô sản xuất.
+              </p>
+            </div>
+            <div>
+              <span class="font-semibold text-[#5C4033] block mb-1">Quá trình hồi sinh và chuyển mình mạnh mẽ:</span>
+              <p class="text-[#6B5549]">
+                Nhờ sự tâm huyết của chị Hạnh cùng sự đồng lòng của bà con làng nghề, hợp tác xã đã được vực dậy. Tri thức nghề không chỉ dừng lại ở phương thức sản xuất thô sơ truyền thống mà đã được nâng tầm, gắn liền với việc tạo ra các sản phẩm hoàn chỉnh, ứng dụng công nghệ số, truyền thông mạng xã hội và đưa sản phẩm vươn ra thị trường quốc tế.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mục 2: Thách thức hiện tại -->
+        <div class="parchment-card p-8 rounded-2xl space-y-4">
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-[#5C4033] uppercase">
+            <span>Phần 2</span>
+          </div>
+          <h3 class="font-heritage text-2xl font-bold text-[#31231E]">
+            Các thách thức hiện tại đối với tri thức nghề
+          </h3>
+          <div class="space-y-4 text-sm text-[#42281D] leading-relaxed pt-2">
+            <div>
+              <span class="font-semibold text-[#5C4033] block mb-1">Quy trình thủ công phức tạp và áp lực thời gian:</span>
+              <p class="text-[#6B5549]">
+                Tri thức làm đũi đòi hỏi sự tỉ mỉ qua hơn ba mươi công đoạn trong suốt chín mươi ngày (từ trồng dâu, nuôi tằm, nấu kén vùi, kéo đũi thủ công với năng suất chỉ đạt từ bảy mươi đến một trăm gam sợi cho mỗi người trong một ngày đến guồng, đánh ống, dệt). Điều này làm cho giá thành sản phẩm rất cao, thậm chí người dân làm ra lụa nhưng khó có điều kiện để sử dụng các sản phẩm làm từ lụa.
+              </p>
+            </div>
+            <div>
+              <span class="font-semibold text-[#5C4033] block mb-1">Thách thức về nguồn nhân lực trẻ và thời gian học tập:</span>
+              <p class="text-[#6B5549]">
+                Thế hệ trẻ tại địa phương học tập từ sáng đến tối, khiến việc truyền dạy trực tiếp và tiếp nối tri thức nghề truyền thống gặp nhiều rào cản, và người trẻ có xu hướng là học tập để vào một trường đại học tốt chứ không ở lại học nghề và nối tiếp nghề.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 8. ĐỀ XUẤT PHƯƠNG ÁN BẢO TỒN VÀ PHÁT HUY TRI THỨC NGHỀ ==================== -->
+  <section id="conservation" class="py-20 md:py-28 bg-[#F4E8D1]/40 border-y border-[#E2D5C3] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-semibold block mb-2">Định hướng tương lai</span>
+        <h2 class="font-heritage text-3xl sm:text-4xl md:text-5xl font-bold text-[#31231E] mb-4">
+          Đề xuất phương án bảo tồn và phát huy tri thức nghề
+        </h2>
+        <div class="w-20 h-0.5 bg-[#C49746] mx-auto mb-4"></div>
+        <p class="text-[#6B5549] text-sm sm:text-base">
+          Ba hướng đi chiến lược đưa tri thức làng nghề Nam Cao hòa nhịp cùng nhịp sống hiện đại, bền vững và giàu bản sắc.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Hướng 1 -->
+        <div class="parchment-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center font-heritage font-bold text-lg mb-5 shadow-sm">
+              01
+            </div>
+            <h3 class="font-heritage text-xl font-bold text-[#31231E] mb-3">
+              Chuyển dịch vai trò của giới trẻ
+            </h3>
+            <p class="text-xs font-semibold text-[#8C2D19] mb-3">
+              Từ người thợ thủ công sang người tiêu dùng có gu và khách hàng mục tiêu
+            </p>
+            <div class="space-y-2 text-xs md:text-sm text-[#6B5549] leading-relaxed mb-4">
+              <p>
+                Thay vì áp lực bắt học sinh hay thanh thiếu niên tại địa phương phải ngồi kéo đũi, dệt vải, hãy định vị các em là thế hệ tiêu dùng hiện đại và người lan tỏa xu hướng.
+              </p>
+              <p>
+                Khi các sản phẩm lụa đũi được thiết kế lại trẻ trung, hợp thời trang, các bạn trẻ sẽ tự nguyện mặc, sử dụng (như áo dài, khăn quàng, túi xách) và khoe lên mạng xã hội một cách tự hào mà không cần ép buộc.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/10] bg-[#F4E8D1] mb-4">
+              <img src="./images/20261009_091110.jpg" alt="Phụ kiện đũi trẻ trung hiện đại gồm vòng chuỗi và scrunchies" class="w-full h-full object-cover" />
+            </div>
+            <div class="pt-4 border-t border-[#E2D5C3]/60">
+              <span class="text-xs text-[#5C4033] font-medium">Lan tỏa niềm tự hào di sản tự nhiên</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hướng 2 -->
+        <div class="parchment-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#C49746] text-[#FAF6EE] flex items-center justify-center font-heritage font-bold text-lg mb-5 shadow-sm">
+              02
+            </div>
+            <h3 class="font-heritage text-xl font-bold text-[#31231E] mb-3">
+              Phát triển du lịch trải nghiệm giáo dục
+            </h3>
+            <p class="text-xs font-semibold text-[#8C2D19] mb-3">
+              Không gian điền dã kết nối học đường và di sản văn hóa
+            </p>
+            <div class="space-y-2 text-xs md:text-sm text-[#6B5549] leading-relaxed mb-4">
+              <p>
+                Biến làng nghề thành điểm đến thực tế cho các trường học, trường quốc tế hoặc sinh viên các trường đại học tại Hà Nội trong các chuyến điền dã, ngoại khóa.
+              </p>
+              <p>
+                Học sinh sinh viên được tận mắt chạm vào kén tằm, thử cảm giác ngâm tay kéo sợi đũi và nghe các nghệ nhân cao tuổi chia sẻ những câu chuyện đời nghề.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/10] bg-[#F4E8D1] mb-4">
+              <img src="./images/IMG_20261009_111336.jpg" alt="Sinh viên tìm hiểu thực địa dải lụa nhuộm tự nhiên tại sân xưởng Nam Cao" class="w-full h-full object-cover" />
+            </div>
+            <div class="pt-4 border-t border-[#E2D5C3]/60">
+              <span class="text-xs text-[#5C4033] font-medium">Học tập qua thực hành cầm tay chỉ việc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hướng 3 -->
+        <div class="parchment-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#8C2D19] text-[#FAF6EE] flex items-center justify-center font-heritage font-bold text-lg mb-5 shadow-sm">
+              03
+            </div>
+            <h3 class="font-heritage text-xl font-bold text-[#31231E] mb-3">
+              Đa dạng hóa sản phẩm & Tối ưu chuỗi giá trị
+            </h3>
+            <p class="text-xs font-semibold text-[#8C2D19] mb-3">
+              Phân khúc kép và kể chuyện di sản chân thực
+            </p>
+            <div class="space-y-2 text-xs md:text-sm text-[#6B5549] leading-relaxed mb-4">
+              <p>
+                Một mặt duy trì dòng sản phẩm cao cấp, thiết kế độc bản (như áo dài, âu phục, phục vụ thị trường xuất khẩu) để giữ vững uy tín thương hiệu.
+              </p>
+              <p>
+                Mặt khác, phát triển các sản phẩm phụ kiện nhỏ gọn, giá cả phải chăng (cột tóc scrunchies, túi vải nhỏ, khăn tay) từ phần sợi thừa để đại đa số khách du lịch nội địa dễ dàng mua sắm.
+              </p>
+              <p>
+                Đưa những câu chuyện về sự tỉ mỉ, mồ hôi và tâm huyết của các nghệ nhân lớn tuổi lên không gian số để chạm đến cảm xúc của cộng đồng.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-xl overflow-hidden border border-[#E2D5C3] aspect-[16/10] bg-[#F4E8D1] mb-4">
+              <img src="./images/20261009_150451.jpg" alt="Bộ sưu tập khăn quàng lụa đũi Nam Cao nhuộm màu thảo mộc tự nhiên" class="w-full h-full object-cover" />
+            </div>
+            <div class="pt-4 border-t border-[#E2D5C3]/60">
+              <span class="text-xs text-[#5C4033] font-medium">Kể chuyện số hóa di sản văn hóa</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 9. KẾT LUẬN — DI SẢN SỐNG TRONG BÀN TAY NGƯỜI THỢ ==================== -->
+  <section id="conclusion" class="py-20 md:py-28 relative overflow-hidden bg-[#2B1C14] text-[#FAF6EE]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+      
+      <div class="inline-flex items-center gap-2 seal-badge border-[#C49746] text-[#E5C378] bg-[#C49746]/10 text-xs rounded-sm">
+        <span>THÔNG ĐIỆP DI SẢN</span>
+      </div>
+
+      <h2 class="font-heritage text-3xl sm:text-4xl md:text-5xl font-bold text-[#FFFDF9] leading-tight">
+        Kết luận — Di sản sống trong bàn tay người thợ
+      </h2>
+
+      <div class="w-24 h-0.5 bg-[#C49746] mx-auto"></div>
+
+      <!-- Đoạn kết chuẩn xác từ tài liệu -->
+      <div class="max-w-3xl mx-auto space-y-6 text-base sm:text-lg text-[#F4E8D1] font-heritage leading-relaxed italic">
+        <p>
+          "Tri thức nghề dệt đũi Nam Cao không chỉ là kiến thức về cách làm ra một tấm vải. Đó là hệ thống kinh nghiệm về nguyên liệu, kỹ thuật, cảm quan, thẩm mỹ và tổ chức lao động được tích lũy qua quá trình thực hành. Mỗi công đoạn đều góp phần tạo nên sản phẩm và phản ánh năng lực của người thợ."
+        </p>
+        <p>
+          "Bảo tồn nghề vì vậy không chỉ là lưu giữ khung cửi, sản phẩm hay hình ảnh, mà còn phải bảo đảm người nắm giữ tri thức có điều kiện tiếp tục hành nghề và truyền dạy. Khi kinh nghiệm được tiếp tục thực hành, chia sẻ và sáng tạo, tri thức nghề mới có thể trở thành một phần sống động của di sản văn hóa."
+        </p>
+      </div>
+
+      <div class="pt-4 flex items-center justify-center gap-3 text-xs text-[#E5C378] tracking-widest uppercase">
+        <span>✤</span>
+        <span>Làng nghề dệt đũi Nam Cao — Tỉnh Thái Bình</span>
+        <span>✤</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 10. SỔ LƯU NIỆM ==================== -->
+  <!-- Dạng nhỏ gọn trang nhã, bấm vào nút để mở sổ lưu niệm dạng cửa sổ -->
+  <section id="guestbook" class="py-16 md:py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="parchment-card p-6 sm:p-8 rounded-2xl border-2 border-[#C49746]/40 bg-[#FFFDF9] shadow-md text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center mx-auto shadow-sm">
+          <svg class="w-6 h-6 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+
+        <div>
+          <span class="text-xs uppercase tracking-widest text-[#8C2D19] font-bold block mb-1">Tâm tình lưu bút</span>
+          <h2 class="font-heritage text-2xl sm:text-3xl font-bold text-[#31231E]">
+            Sổ lưu niệm làng nghề Nam Cao
+          </h2>
+          <div class="w-16 h-0.5 bg-[#C49746] mx-auto my-3"></div>
+          <p class="text-xs sm:text-sm text-[#6B5549] max-w-xl mx-auto leading-relaxed">
+            Nơi lưu giữ những dòng cảm nghĩ, lời chúc tốt đẹp của du khách và thế hệ trẻ gửi tới các nghệ nhân dệt đũi Nam Cao. Bấm vào nút bên dưới để mở sổ và xem lưu bút.
+          </p>
+        </div>
+
+        <div class="pt-2">
+          <button onclick="openGuestbookModal()" class="btn-heritage px-6 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 shadow-md">
+            <svg class="w-4 h-4 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+            </svg>
+            <span>Mở sổ lưu niệm</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== CỬA SỔ SỔ LƯU NIỆM ==================== -->
+  <!-- Chỉ hiện ra khi người xem bấm vào nút Mở sổ lưu niệm -->
+  <div id="guestbookModal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="parchment-card w-full max-w-5xl rounded-2xl shadow-2xl border-2 border-[#C49746] bg-[#FFFDF9] overflow-hidden my-8 animate-fadeIn">
+      
+      <!-- Thanh tiêu đề modal -->
+      <div class="bg-[#5C4033] text-[#FAF6EE] px-6 py-4 flex items-center justify-between border-b border-[#C49746]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-[#42281D] flex items-center justify-center">
+            <svg class="w-5 h-5 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heritage text-lg sm:text-xl font-bold text-[#FFFDF9]">
+              Sổ lưu niệm làng nghề dệt đũi Nam Cao
+            </h3>
+            <span class="text-xs text-[#E5C378]">Lưu giữ tình cảm và ký ức của du khách muôn phương</span>
+          </div>
+        </div>
+
+        <!-- Nút đóng modal -->
+        <button onclick="closeGuestbookModal()" class="w-9 h-9 rounded-full bg-[#42281D] hover:bg-[#8C2D19] text-[#FAF6EE] flex items-center justify-center transition-colors shadow-sm" aria-label="Đóng sổ lưu niệm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Thân modal: Gồm Form gửi lưu bút và Danh sách lưu bút -->
+      <div class="p-6 sm:p-8 max-h-[75vh] overflow-y-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Cột trái: Form viết lưu bút mới -->
+          <div class="lg:col-span-5 bg-[#FAF6EE] p-6 rounded-xl border border-[#E2D5C3]">
+            <div class="flex items-center gap-2 mb-4 pb-2 border-b border-[#E2D5C3]">
+              <svg class="w-4 h-4 text-[#8C2D19]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+              <h4 class="font-heritage text-base font-bold text-[#31231E]">Gửi lưu bút của bạn</h4>
+            </div>
+
+            <form id="guestbookForm" class="space-y-4">
+              <div>
+                <label for="guestName" class="block text-xs font-semibold text-[#5C4033] uppercase tracking-wider mb-1">Họ và tên của bạn</label>
+                <input type="text" id="guestName" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-3.5 py-2 rounded-lg border border-[#E2D5C3] bg-[#FFFDF9] text-xs sm:text-sm text-[#31231E] focus:outline-none focus:border-[#C49746] transition-colors" />
+              </div>
+
+              <div>
+                <label for="guestRole" class="block text-xs font-semibold text-[#5C4033] uppercase tracking-wider mb-1">Nơi ở hoặc đơn vị công tác</label>
+                <input type="text" id="guestRole" placeholder="Ví dụ: Sinh viên Đại học Ngoại thương Hà Nội" class="w-full px-3.5 py-2 rounded-lg border border-[#E2D5C3] bg-[#FFFDF9] text-xs sm:text-sm text-[#31231E] focus:outline-none focus:border-[#C49746] transition-colors" />
+              </div>
+
+              <div>
+                <label for="guestMessage" class="block text-xs font-semibold text-[#5C4033] uppercase tracking-wider mb-1">Đôi dòng cảm nhận hoặc lời chúc</label>
+                <textarea id="guestMessage" rows="4" required placeholder="Chia sẻ cảm xúc của bạn khi tìm hiểu về tri thức và bàn tay tài hoa của nghệ nhân dệt đũi Nam Cao..." class="w-full px-3.5 py-2 rounded-lg border border-[#E2D5C3] bg-[#FFFDF9] text-xs sm:text-sm text-[#31231E] focus:outline-none focus:border-[#C49746] transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-heritage py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm">
+                <svg class="w-4 h-4 text-[#E5C378]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                <span>Lưu vào sổ</span>
+              </button>
+            </form>
+
+            <div id="guestbookToast" class="hidden mt-3 p-2.5 rounded-lg bg-[#F4E8D1] border border-[#C49746] text-xs text-[#5C4033] text-center font-medium animate-fadeIn">
+              Cảm ơn bạn đã gửi gắm tình cảm và lưu lại ký ức đẹp cùng làng nghề dệt đũi Nam Cao!
+            </div>
+          </div>
+
+          <!-- Cột phải: Danh sách các dòng lưu bút -->
+          <div class="lg:col-span-7 space-y-3">
+            <div class="flex items-center justify-between pb-2 border-b border-[#E2D5C3]">
+              <h4 class="font-heritage text-base font-bold text-[#31231E]">Những dòng lưu bút trân quý</h4>
+              <span class="text-xs text-[#6B5549]">Được lưu giữ theo thời gian</span>
+            </div>
+
+            <div id="guestbookList" class="space-y-3 max-h-[460px] overflow-y-auto pr-1">
+              <!-- Các thẻ lưu bút sinh ra từ app.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Chân modal -->
+      <div class="bg-[#F4E8D1]/50 px-6 py-3 border-t border-[#E2D5C3] flex items-center justify-end">
+        <button onclick="closeGuestbookModal()" class="px-4 py-1.5 rounded-lg bg-[#5C4033] text-[#FAF6EE] text-xs sm:text-sm font-medium hover:bg-[#8C2D19] transition-all inline-flex items-center gap-1.5 shadow-sm">
+          <span>Đóng sổ</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-[#231710] text-[#FAF6EE] pt-16 pb-12 border-t border-[#5C4033]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#42281D]">
+        
+        <!-- Cột giới thiệu -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#5C4033] text-[#FAF6EE] flex items-center justify-center border border-[#C49746]">
+              <svg class="w-5 h-5 text-[#E5C378]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              </svg>
+            </div>
+            <span class="font-heritage text-xl font-bold text-[#FFFDF9]">Đũi Nam Cao</span>
+          </div>
+          <p class="text-xs sm:text-sm text-[#E2D5C3] leading-relaxed">
+            Dự án số hóa và tôn vinh tri thức nghề dệt đũi thủ công truyền thống xã Nam Cao, huyện Kiến Xương, tỉnh Thái Bình — Di sản văn hóa phi vật thể quốc gia được bảo tồn qua hơn bốn thế kỷ.
+          </p>
+          <div class="pt-2">
+            <span class="seal-badge text-[11px] rounded-sm text-[#E5C378] border-[#C49746]">DI SẢN TRUYỀN NỐI 2023</span>
+          </div>
+        </div>
+
+        <!-- Cột liên kết nhanh -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-heritage text-sm font-bold text-[#FFFDF9] uppercase tracking-wider">Mục lục chuyển trang</h4>
+          <ul class="space-y-2 text-xs text-[#E2D5C3]">
+            <li><a href="#home" class="hover:text-[#C49746] transition-colors">Trang chủ</a></li>
+            <li><a href="#about" class="hover:text-[#C49746] transition-colors">Khái quát về nghề đũi</a></li>
+            <li><a href="#village-location" class="hover:text-[#C49746] transition-colors">Vị trí địa lý làng nghề</a></li>
+            <li><a href="#journey" class="hover:text-[#C49746] transition-colors">Hành trình sợi đũi (10 công đoạn)</a></li>
+            <li><a href="#comparison" class="hover:text-[#C49746] transition-colors">So sánh lụa thủ công & công nghiệp</a></li>
+            <li><a href="#artisans" class="hover:text-[#C49746] transition-colors">Người nắm giữ tri thức</a></li>
+            <li><a href="#conservation" class="hover:text-[#C49746] transition-colors">Đề xuất phương án bảo tồn</a></li>
+            <li><a href="#guestbook" class="hover:text-[#C49746] transition-colors">Sổ lưu niệm di sản</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột thông tin liên hệ và cơ sở -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="font-heritage text-sm font-bold text-[#FFFDF9] uppercase tracking-wider">Thông tin làng nghề & HTX</h4>
+          <div class="space-y-2 text-xs text-[#E2D5C3] leading-relaxed">
+            <p>
+              <span class="text-[#C49746] font-semibold">Cơ sở sản xuất:</span> Thôn Nam Đường Đông, xã Nam Cao, huyện Kiến Xương, tỉnh Thái Bình.
+            </p>
+            <p>
+              <span class="text-[#C49746] font-semibold">Số điện thoại liên hệ:</span> +84 985 969 864
+            </p>
+            <p>
+              <span class="text-[#C49746] font-semibold">Showroom giới thiệu:</span> Số 83 phố Hàng Gai, phường Hàng Gai, quận Hoàn Kiếm, thành phố Hà Nội.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#8B654C] gap-4 text-center sm:text-left">
+        <p>© 2026 Tri thức nghề dệt đũi Nam Cao. Lưu giữ và vinh danh tinh hoa di sản văn hóa truyền thống Việt Nam.</p>
+        <p>Thực hiện với tình yêu làng nghề truyền thống.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script ứng dụng -->
+  <script src="./app.js"></script>
+</body>
+</html>

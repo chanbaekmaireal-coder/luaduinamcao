@@ -1,0 +1,242 @@
+/* ==========================================================================
+   CSS CHO WEBSITE: TRI THỨC NGHỀ DỆT ĐŨI NAM CAO
+   Phong cách cổ xưa, hoài niệm, trầm ấm và đậm chất văn hóa truyền thống Việt Nam
+   ========================================================================== */
+
+:root {
+  --color-bg: #FAF6EE;
+  --color-bg-alt: #F4E8D1;
+  --color-silk-gold: #C49746;
+  --color-silk-gold-light: #F4E8D1;
+  --color-wood-dark: #42281D;
+  --color-wood-medium: #5C4033;
+  --color-wood-light: #8B654C;
+  --color-text-primary: #31231E;
+  --color-text-secondary: #6B5549;
+  --color-border-warm: #E2D5C3;
+  --color-accent-red: #8C2D19;
+  --color-white-cream: #FFFDF9;
+}
+
+/* Background texture mô phỏng mặt vải đũi tự nhiên */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: radial-gradient(#d8c7ad 0.65px, transparent 0.65px), radial-gradient(#d8c7ad 0.65px, var(--color-bg) 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Typography phong cách hoài niệm, di sản */
+.font-heritage {
+  font-family: 'Playfair Display', 'Noto Serif', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Thanh cuộn trang mang phong cách cổ điển */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1e7d4;
+}
+::-webkit-scrollbar-thumb {
+  background: #8b654c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c4033;
+}
+
+/* Hiệu ứng viền giấy dó, thẻ truyền thống */
+.parchment-card {
+  background: var(--color-white-cream);
+  border: 1px solid var(--color-border-warm);
+  box-shadow: 0 4px 20px rgba(92, 64, 51, 0.06);
+  position: relative;
+}
+
+.parchment-card::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(196, 151, 70, 0.35);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Họa tiết góc truyền thống */
+.corner-ornament {
+  position: relative;
+}
+.corner-ornament::after {
+  content: "✤";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: rgba(196, 151, 70, 0.5);
+  font-size: 14px;
+}
+
+/* Hành trình sợi đũi - Dây sợi đũi uốn lượn */
+.thread-journey-line {
+  stroke-dasharray: 8 6;
+  animation: threadFlow 30s linear infinite;
+}
+
+@keyframes threadFlow {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+/* Hiệu ứng nhịp đập / ánh sáng kén tơ */
+.silk-pulse {
+  box-shadow: 0 0 0 0 rgba(196, 151, 70, 0.5);
+  animation: pulseSilk 2.2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulseSilk {
+  to {
+    box-shadow: 0 0 0 16px rgba(196, 151, 70, 0);
+  }
+}
+
+/* Nút bấm di sản cổ điển */
+.btn-heritage {
+  background: linear-gradient(135deg, #5C4033 0%, #42281D 100%);
+  color: #FFFDF9;
+  border: 1px solid #7B5742;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-heritage:hover {
+  background: linear-gradient(135deg, #7B5742 0%, #5C4033 100%);
+  box-shadow: 0 6px 18px rgba(66, 40, 29, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #C49746 0%, #A97A2E 100%);
+  color: #FFFFFF;
+  border: 1px solid #DFB568;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #D4A756 0%, #B98A3E 100%);
+  box-shadow: 0 6px 18px rgba(196, 151, 70, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Con dấu triện cổ xưa (Châu sa đỏ) */
+.seal-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #8C2D19;
+  color: #8C2D19;
+  background: rgba(140, 45, 25, 0.05);
+  padding: 4px 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.seal-badge::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px solid rgba(140, 45, 25, 0.4);
+}
+
+/* Modal chi tiết công đoạn */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(43, 33, 24, 0.65);
+}
+
+/* Hiệu ứng trượt ảnh so sánh (Comparison Slider) */
+.comparison-container {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.comparison-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #F59E0B;
+  cursor: ew-resize;
+  z-index: 20;
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F59E0B;
+  border: 2px solid #D97706;
+  color: #FFFDF9;
+  box-shadow: 0 2px 12px rgba(217, 119, 6, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Mặt vải đũi thủ công (Ấm áp, có vân thớ tơ tự nhiên) */
+.cloth-handmade {
+  background-color: #FBF6EB;
+  background-image: 
+    linear-gradient(rgba(196, 151, 70, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 151, 70, 0.15) 1px, transparent 1px),
+    radial-gradient(rgba(140, 45, 25, 0.07) 1.5px, transparent 1.5px);
+  background-size: 22px 22px, 22px 22px, 44px 44px;
+}
+
+/* Mặt vải công nghiệp (Trơn lỳ, kẻ ô máy tăm tắp) */
+.cloth-industrial {
+  background-color: #F8FAFC;
+  background-image: 
+    linear-gradient(rgba(203, 213, 225, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(203, 213, 225, 0.6) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* Sổ lưu niệm kiểu giấy mộc */
+.guestbook-texture {
+  background: #F8F2E4;
+  border-left: 12px solid #5C4033;
+  box-shadow: -4px 8px 24px rgba(66, 40, 29, 0.15);
+  position: relative;
+}
+
+.guestbook-line {
+  background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(196, 151, 70, 0.2) 31px, rgba(196, 151, 70, 0.2) 32px);
+  line-height: 32px;
+}
+
+/* Scroll reveal helper */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
